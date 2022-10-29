@@ -1,7 +1,7 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 
-class HelloWorld {
+class AttackStatCalculator {
     public static void main(String[] args) {
         int userInput = 500;//change when you want
         double[][][] a = new double[6][6][3000]; //a[x1,x2,y] here is after x1 attack and x2 element attack rolls, the count of landing on each element attack value
@@ -11,12 +11,12 @@ class HelloWorld {
         for (int i2=0;i2<=5-i1;i2++){
             for (int j=0;j<2000;j++){
                 if (i1-1 >=0){
-                for (int k=93;k<=234;k++){
+                for (int k=93;k<=234;k++){ //min max for flat attack
                     a[i1][i2][j+k]=a[i1][i2][j+k]+a[i1-1][i2][j];
                 }
                 }
                 if (i2-1 >=0){
-                for (int k=125;k<=312;k++){
+                for (int k=125;k<=312;k++){ //min max for element attack
                     a[i1][i2][j+k]=a[i1][i2][j+k]+a[i1][i2-1][j];
                 }
                 }
